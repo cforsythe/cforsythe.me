@@ -7,3 +7,9 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+    networks:
+      - hosting_external
+
+networks:
+  hosting_external:
+    external: true
